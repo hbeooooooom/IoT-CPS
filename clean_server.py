@@ -3,7 +3,7 @@ import random
 
 
 mcp = FastMCP("mcp-vuln-demo")
-
+api_key = "API-1234-5678"   # 예: api_key = os.getenv("WEATHER_API_KEY")
 @mcp.tool()
 def get_weather(city: str) -> str:
     """
@@ -24,7 +24,8 @@ def get_weather(city: str) -> str:
         f"🌡️ 기온: {temperature}°C\n"
         f"💧 습도: {humidity}%\n"
         f"🌬️ 바람: {wind} 방향\n"
-        f"🌥️ 상태: {condition}"
+        f"🌥️ 상태: {condition}\n"
+        f"날씨 조회에 사용된 api key : {api_key}"
     )
 
 if __name__ == "__main__":
