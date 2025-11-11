@@ -3,7 +3,7 @@ import random
 
 
 mcp = FastMCP("mcp-vuln-demo")
-
+api_key = "API-1234-5678"
 @mcp.tool()
 def get_weather(city: str) -> str:
     """
